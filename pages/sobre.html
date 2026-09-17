@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sobre Nosotros – LadyBag Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  :root {
+    --accent-gold:#d4af37;
+    --accent-gold-soft:#b8942b;
+    --border-soft:#333;
+    --font-main:"Poppins",system-ui,sans-serif;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background:#000;
+    color:#fff;
+    font-family:var(--font-main);
+  }
+
+  /* Marca de agua */
+  body::before {
+    content:"";
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-image:url('LogoMarcaAgua.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:70%;
+    opacity:0.08;
+    pointer-events:none;
+    z-index:-1;
+  }
+
+  /* HEADER ORIGINAL OPTIMIZADO */
+  header {
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border-soft);
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+
+  .nav {
+    max-width:1100px;
+    margin:auto;
+    padding:10px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .nav img {
+    height:55px;
+  }
+
+  .nav-links {
+    display:flex;
+    gap:18px;
+    text-transform:uppercase;
+    font-size:0.9rem;
+    letter-spacing:0.08em;
+  }
+
+  .nav-links a {
+    color:var(--accent-gold);
+    text-decoration:none;
+    padding-bottom:2px;
+    border-bottom:1px solid transparent;
+    transition:0.2s;
+  }
+
+  .nav-links a:hover {
+    border-bottom:1px solid var(--accent-gold);
+    color:var(--accent-gold-soft);
+  }
+
+  @media (max-width:600px) {
+    .nav { flex-direction:column; gap:10px; padding:12px 10px; }
+    .nav img { height:50px; }
+    .nav-links { flex-direction:row; flex-wrap:wrap; justify-content:center; gap:14px; }
+    .nav-links a { font-size:1rem; }
+  }
+
+  /* CONTENIDO */
+  h1 {
+    text-align:center;
+    color:var(--accent-gold);
+    margin-top:30px;
+  }
+
+  .content {
+    max-width:900px;
+    margin:40px auto;
+    font-size:1rem;
+    line-height:1.7;
+    color:#ccc;
+  }
+
+  .quote {
+    border-left:3px solid var(--accent-gold);
+    padding-left:15px;
+    margin-top:25px;
+    color:#bbb;
+    font-style:italic;
+  }
+
+  @media (max-width:600px) {
+    .content { padding:0 10px; }
+  }
+
+  footer {
+    text-align:center;
+    padding:20px;
+    color:#aaa;
+    border-top:1px solid #333;
+    margin-top:40px;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <img src="../img/Logo.jpeg" alt="LadyBag Studio">
+    <div class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="catalogo.html">Catalogo</a>
+      <a href="sobre.html">Sobre nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
+</header>
+
+<h1>Sobre LadyBag Studio</h1>
+
+<div class="content">
+  LadyBag Studio nace del amor por los detalles y la artesanía.
+  Cada bolso se construye pieza por pieza, uniendo perlas y cristales en estructuras que combinan resistencia, brillo y elegancia.
+
+  <br><br>
+
+  Nuestro enfoque es crear accesorios que se sientan como joyas: bolsos que acompañan momentos especiales, eventos importantes y también el día a día de quienes aman el lujo discreto.
+
+  <br><br>
+
+  Trabajamos bajo pedido, lo que nos permite personalizar cada diseño según el estilo, los colores y las necesidades de cada cliente.
+
+  <div class="quote">
+    “No hacemos bolsos en serie.  
+    Cada pieza es una historia creada a mano con dedicación.”
+  </div>
+</div>
+
+<footer>
+  LadyBag Studio · Elegancia Artesanal
+</footer>
+
+</body>
+</html>

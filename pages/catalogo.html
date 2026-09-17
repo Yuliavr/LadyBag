@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Catalogo – LadyBag Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  :root {
+    --accent-gold:#d4af37;
+    --accent-gold-soft:#b8942b;
+    --border-soft:#333;
+    --font-main:"Poppins",system-ui,sans-serif;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background:#000;
+    color:#fff;
+    font-family:var(--font-main);
+  }
+
+  /* Marca de agua */
+  body::before {
+    content:"";
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-image:url('LogoMarcaAgua.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:70%;
+    opacity:0.08;
+    pointer-events:none;
+    z-index:-1;
+  }
+
+  /* HEADER ORIGINAL OPTIMIZADO */
+  header {
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border-soft);
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+
+  .nav {
+    max-width:1100px;
+    margin:auto;
+    padding:10px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .nav img {
+    height:55px;
+  }
+
+  .nav-links {
+    display:flex;
+    gap:18px;
+    text-transform:uppercase;
+    font-size:0.9rem;
+    letter-spacing:0.08em;
+  }
+
+  .nav-links a {
+    color:var(--accent-gold);
+    text-decoration:none;
+    padding-bottom:2px;
+    border-bottom:1px solid transparent;
+    transition:0.2s;
+  }
+
+  .nav-links a:hover {
+    border-bottom:1px solid var(--accent-gold);
+    color:var(--accent-gold-soft);
+  }
+
+  @media (max-width:600px) {
+    .nav { flex-direction:column; gap:10px; padding:12px 10px; }
+    .nav img { height:50px; }
+    .nav-links { flex-direction:row; flex-wrap:wrap; justify-content:center; gap:14px; }
+    .nav-links a { font-size:1rem; }
+  }
+
+  /* CONTENIDO */
+  h1 {
+    text-align:center;
+    color:var(--accent-gold);
+    margin-top:30px;
+  }
+
+  .grid {
+    max-width:1100px;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+  }
+
+  .card {
+    background:#111;
+    border:1px solid var(--border-soft);
+    border-radius:12px;
+    padding:15px;
+  }
+
+  .card img {
+    width:100%;
+    border-radius:10px;
+    border:1px solid #333;
+  }
+
+  .card h3 {
+    color:var(--accent-gold);
+    margin:10px 0;
+  }
+
+  .card p {
+    color:#ccc;
+    font-size:0.9rem;
+  }
+
+  footer {
+    text-align:center;
+    padding:20px;
+    color:#aaa;
+    border-top:1px solid #333;
+    margin-top:40px;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <img src="../img/Logo.jpeg" alt="LadyBag Studio">
+    <div class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="catalogo.html">Catalogo</a>
+      <a href="sobre.html">Sobre nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
+</header>
+
+<h1>Catalogo LadyBag Studio</h1>
+
+<div class="grid">
+
+  <div class="card">
+    <img src="../img/Bolso.jpeg" alt="Bolso Clasico">
+    <h3>Bolso Clasico</h3>
+    <p>Estructura rigida, brillo elegante y diseño ideal para eventos especiales.</p>
+  </div>
+
+  <div class="card">
+    <img src="../img/bolso2.jpg" alt="Mini LadyBag">
+    <h3>Mini LadyBag</h3>
+    <p>Compacto, brillante y perfecto para llevar lo esencial con estilo.</p>
+  </div>
+
+  <div class="card">
+    <img src="i../mg/bolso3.jpg" alt="Diseño Personalizado">
+    <h3>Diseño Personalizado</h3>
+    <p>Elige color, tamaño, cierre y detalles dorados para crear tu bolso unico.</p>
+  </div>
+
+</div>
+
+<footer>
+  LadyBag Studio · Elegancia Artesanal
+</footer>
+
+</body>
+</html>

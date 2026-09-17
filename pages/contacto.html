@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Contacto – LadyBag Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  :root {
+    --accent-gold:#d4af37;
+    --accent-gold-soft:#b8942b;
+    --border-soft:#333;
+    --font-main:"Poppins",system-ui,sans-serif;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background:#000;
+    color:#fff;
+    font-family:var(--font-main);
+  }
+
+  /* Marca de agua */
+  body::before {
+    content:"";
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-image:url('LogoMarcaAgua.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:70%;
+    opacity:0.08;
+    pointer-events:none;
+    z-index:-1;
+  }
+
+  /* HEADER ORIGINAL OPTIMIZADO */
+  header {
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border-soft);
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+
+  .nav {
+    max-width:1100px;
+    margin:auto;
+    padding:10px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .nav img {
+    height:55px;
+  }
+
+  .nav-links {
+    display:flex;
+    gap:18px;
+    text-transform:uppercase;
+    font-size:0.9rem;
+    letter-spacing:0.08em;
+  }
+
+  .nav-links a {
+    color:var(--accent-gold);
+    text-decoration:none;
+    padding-bottom:2px;
+    border-bottom:1px solid transparent;
+    transition:0.2s;
+  }
+
+  .nav-links a:hover {
+    border-bottom:1px solid var(--accent-gold);
+    color:var(--accent-gold-soft);
+  }
+
+  @media (max-width:600px) {
+    .nav { flex-direction:column; gap:10px; padding:12px 10px; }
+    .nav img { height:50px; }
+    .nav-links { flex-direction:row; flex-wrap:wrap; justify-content:center; gap:14px; }
+    .nav-links a { font-size:1rem; }
+  }
+
+  /* CONTENIDO */
+  h1 {
+    text-align:center;
+    color:var(--accent-gold);
+    margin-top:30px;
+  }
+
+  .contact {
+    max-width:700px;
+    margin:40px auto;
+    font-size:1rem;
+    color:#ccc;
+  }
+
+  .item {
+    margin-bottom:25px;
+  }
+
+  .label {
+    font-size:0.85rem;
+    color:#999;
+    text-transform:uppercase;
+  }
+
+  .value {
+    color:var(--accent-gold);
+    font-size:1.2rem;
+  }
+
+  footer {
+    text-align:center;
+    padding:20px;
+    color:#aaa;
+    border-top:1px solid #333;
+    margin-top:40px;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <img src="../img/Logo.jpeg" alt="LadyBag Studio">
+    <div class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="catalogo.html">Catalogo</a>
+      <a href="sobre.html">Sobre nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
+</header>
+
+<h1>Contacto</h1>
+
+<div class="contact">
+
+  <div class="item">
+    <div class="label">WhatsApp</div>
+    <div class="value">+57 300 000 0000</div>
+  </div>
+
+  <div class="item">
+    <div class="label">Ubicación</div>
+    <div class="value">Barranquilla-Atlántico, Colombia</div>
+  </div>
+
+  <div class="item">
+    <div class="label">Horarios</div>
+    <div class="value">Lunes a Sábado – 9:00 AM a 6:00 PM</div>
+  </div>
+
+  <div class="item">
+    <div class="label">Redes Sociales</div>
+    <div class="value">Instagram · Facebook · TikTok</div>
+  </div>
+
+</div>
+
+<footer>
+  LadyBag Studio · Elegancia Artesanal
+</footer>
+
+</body>
+</html>
