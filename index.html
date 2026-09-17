@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>LadyBag Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  :root {
+    --accent-gold:#d4af37;
+    --accent-gold-soft:#b8942b;
+    --border-soft:#333;
+    --font-main:"Poppins",system-ui,sans-serif;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background: radial-gradient(circle at top, #202020 0, #000 45%, #000 100%);
+    color:#fff;
+    font-family:var(--font-main);
+  }
+
+  /* Marca de agua */
+  body::before {
+    content:"";
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-image:url('LogoMarcaAgua.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:70%;
+    opacity:0.08;
+    pointer-events:none;
+    z-index:-1;
+  }
+
+  /* HEADER ORIGINAL OPTIMIZADO */
+  header {
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border-soft);
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+
+  .nav {
+    max-width:1100px;
+    margin:auto;
+    padding:10px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .nav img {
+    height:55px;
+  }
+
+  .nav-links {
+    display:flex;
+    gap:18px;
+    text-transform:uppercase;
+    font-size:0.9rem;
+    letter-spacing:0.08em;
+  }
+
+  .nav-links a {
+    color:var(--accent-gold);
+    text-decoration:none;
+    padding-bottom:2px;
+    border-bottom:1px solid transparent;
+    transition:0.2s;
+  }
+
+  .nav-links a:hover {
+    border-bottom:1px solid var(--accent-gold);
+    color:var(--accent-gold-soft);
+  }
+
+  @media (max-width:600px) {
+    .nav { flex-direction:column; gap:10px; padding:12px 10px; }
+    .nav img { height:50px; }
+    .nav-links { flex-direction:row; flex-wrap:wrap; justify-content:center; gap:14px; }
+    .nav-links a { font-size:1rem; }
+  }
+
+  /* HERO */
+  main {
+    max-width:1100px;
+    margin:auto;
+    padding:30px 20px 60px;
+  }
+
+  .hero {
+    text-align:center;
+    padding:30px 0 40px;
+    border-bottom:1px solid var(--border-soft);
+  }
+
+  .hero-image {
+    display:flex;
+    justify-content:center;
+    margin-bottom:25px;
+  }
+
+  .hero-logo {
+    max-width:90%;
+    border-radius:12px;
+    border:1px solid var(--accent-gold);
+    box-shadow:0 0 20px rgba(212,175,55,0.3);
+  }
+
+  @media (max-width:600px) {
+    .hero-logo { max-width:100%; }
+  }
+
+  .slogan {
+    font-size:1.4rem;
+    color:var(--accent-gold);
+    margin-bottom:18px;
+  }
+
+  .hero-sub {
+    font-size:1rem;
+    color:#ccc;
+    margin-bottom:18px;
+  }
+
+  .hero-tags {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:22px;
+  }
+
+  .tag {
+    border-radius:999px;
+    border:1px solid var(--border-soft);
+    padding:4px 10px;
+    font-size:0.75rem;
+    color:#bbb;
+  }
+
+  .tag.gold {
+    border-color:var(--accent-gold-soft);
+    color:var(--accent-gold);
+  }
+
+  .hero-actions {
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:10px;
+  }
+
+  .btn-primary {
+    background:linear-gradient(135deg,var(--accent-gold),var(--accent-gold-soft));
+    color:#000;
+    padding:10px 20px;
+    border-radius:999px;
+    border:none;
+    cursor:pointer;
+    font-weight:600;
+  }
+
+  .btn-secondary {
+    background:transparent;
+    color:var(--accent-gold);
+    padding:10px 20px;
+    border-radius:999px;
+    border:1px solid var(--border-soft);
+    cursor:pointer;
+  }
+
+  footer {
+    text-align:center;
+    padding:20px;
+    color:#777;
+    border-top:1px solid var(--border-soft);
+  }
+
+  footer span { color:var(--accent-gold-soft); }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <img src="img/Logo.jpeg" alt="LadyBag Studio">
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="pages/catalogo.html">Catálogo</a>
+      <a href="pages/sobre.html">Sobre nosotros</a>
+      <a href="pages/contacto.html">Contacto</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+
+  <div class="hero-image">
+    <img src="img/Slogan.jpg" class="hero-logo">
+  </div>
+
+  <p class="slogan">Cada perla cuenta una historia, cada bolso refleja elegancia.</p>
+
+  <p class="hero-sub">
+    LadyBag Studio crea bolsos artesanales con perlas y cristales, diseñados para mujeres que buscan elegancia, brillo y exclusividad.
+  </p>
+
+  <div class="hero-tags">
+    <div class="tag gold">Hecho a mano</div>
+    <div class="tag">Diseños únicos</div>
+    <div class="tag">Perlas & cristales</div>
+    <div class="tag">Estilo boutique</div>
+  </div>
+
+  <div class="hero-actions">
+    <a href="pages/catalogo.html"><button class="btn-primary">Ver catálogo completo</button></a>
+    <a href="pages/contacto.html"><button class="btn-secondary">Hacer un pedido por WhatsApp</button></a>
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  LadyBag Studio · <span>Elegancia Artesanal</span>
+</footer>
+
+</body>
+</html>
